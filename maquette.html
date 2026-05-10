@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquette - Site département informatique EFREI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #102033;
+            line-height: 1.6;
+            padding: 40px;
+        }
+
+        :root {
+            --bleu: #0A316C;
+            --bleu-fonce: #061d40;
+            --cyan: #81ECEC;
+            --jaune: #FDCB6E;
+            --blanc: #FFFFFF;
+            --gris: #dce3ec;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 18px 45px rgba(10, 49, 108, 0.15);
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 4px solid var(--cyan);
+            padding-bottom: 25px;
+        }
+
+        .sur-titre {
+            color: var(--bleu);
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+        }
+
+        h1 {
+            color: var(--bleu);
+            font-size: 2.4rem;
+            line-height: 1.1;
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: var(--bleu);
+            margin: 35px 0 15px;
+            font-size: 1.7rem;
+        }
+
+        h3 {
+            color: var(--bleu);
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #516173;
+        }
+
+        .infos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .info {
+            background: #f4f7fb;
+            border-left: 6px solid var(--jaune);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .plan-site {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .page-site {
+            background: var(--bleu);
+            color: white;
+            border-radius: 16px;
+            padding: 18px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .wireframes {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+            margin-top: 20px;
+            align-items: start;
+        }
+
+        .wireframe {
+            border: 3px solid var(--bleu);
+            border-radius: 20px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .wireframe.mobile {
+            max-width: 330px;
+            margin: auto;
+        }
+
+        .barre {
+            background: var(--bleu);
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 18px;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .nav-mini {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-mini span {
+            width: 45px;
+            height: 8px;
+            background: var(--cyan);
+            border-radius: 999px;
+        }
+
+        .bloc {
+            margin: 18px;
+            border-radius: 14px;
+            background: #edf2f8;
+            border: 2px dashed #b7c4d6;
+        }
+
+        .hero {
+            height: 150px;
+            background: linear-gradient(135deg, #edf2f8, #dfeafa);
+        }
+
+        .titre-faux {
+            width: 55%;
+            height: 18px;
+            background: var(--bleu);
+            border-radius: 999px;
+            margin: 18px;
+        }
+
+        .texte-faux {
+            width: 75%;
+            height: 10px;
+            background: #9aacc2;
+            border-radius: 999px;
+            margin: 12px 18px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 18px;
+        }
+
+        .card {
+            height: 100px;
+            background: white;
+            border: 2px solid var(--gris);
+            border-radius: 14px;
+        }
+
+        .section-dark {
+            height: 140px;
+            background: var(--bleu-fonce);
+            margin: 18px;
+            border-radius: 14px;
+        }
+
+        .footer-faux {
+            height: 55px;
+            background: var(--bleu-fonce);
+            margin-top: 18px;
+        }
+
+        .mobile .barre {
+            height: 50px;
+        }
+
+        .mobile .nav-mini span {
+            width: 22px;
+        }
+
+        .mobile .hero {
+            height: 110px;
+        }
+
+        .mobile .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .mobile .card {
+            height: 70px;
+        }
+
+        .mobile .section-dark {
+            height: 100px;
+        }
+
+        .choix {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .choix article {
+            background: #f4f7fb;
+            border-radius: 18px;
+            padding: 20px;
+            border-top: 6px solid var(--cyan);
+        }
+
+        .palette {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .couleur {
+            flex: 1;
+            min-width: 160px;
+            border-radius: 16px;
+            padding: 20px;
+            color: white;
+            font-weight: 800;
+        }
+
+        .bleu {
+            background: var(--bleu);
+        }
+
+        .bleu-fonce {
+            background: var(--bleu-fonce);
+        }
+
+        .cyan {
+            background: var(--cyan);
+            color: var(--bleu-fonce);
+        }
+
+        .jaune {
+            background: var(--jaune);
+            color: var(--bleu-fonce);
+        }
+
+        .checklist {
+            margin-top: 20px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .check {
+            background: #f4f7fb;
+            border-radius: 14px;
+            padding: 14px 18px;
+            border-left: 6px solid var(--bleu);
+            color: #516173;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .page {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+
+        @media screen and (max-width: 850px) {
+            body {
+                padding: 20px;
+            }
+
+            .infos,
+            .plan-site,
+            .wireframes,
+            .choix {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <p class="sur-titre">Maquette du site</p>
+            <h1>Site vitrine du département informatique de l’EFREI</h1>
+            <p>
+                Cette maquette présente l’organisation générale du site, les pages prévues,
+                la structure visuelle des écrans et les choix graphiques utilisés pour le projet.
+            </p>
+
+            <div class="infos">
+                <div class="info">
+                    <h3>Projet</h3>
+                    <p>Programmation Web TI402</p>
+                </div>
+
+                <div class="info">
+                    <h3>Technologies</h3>
+                    <p>HTML5, CSS3, JavaScript</p>
+                </div>
+
+                <div class="info">
+                    <h3>Réalisation</h3>
+                    <p>Thibault Ruellan</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <h2>1. Plan du site</h2>
+                <p>
+                    Le site est organisé autour de cinq pages principales afin de rendre
+                    la navigation simple et claire.
+                </p>
+
+                <div class="plan-site">
+                    <div class="page-site">Accueil</div>
+                    <div class="page-site">Formations</div>
+                    <div class="page-site">Vie étudiante</div>
+                    <div class="page-site">Contact</div>
+                    <div class="page-site">À propos</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Wireframes principaux</h2>
+                <p>
+                    La version ordinateur utilise une mise en page large avec une navigation horizontale,
+                    tandis que la version mobile passe en colonne avec un menu responsive.
+                </p>
+
+                <div class="wireframes">
+                    <article>
+                        <h3>Version ordinateur</h3>
+
+                        <div class="wireframe">
+                            <div class="barre">
+                                <span>Logo EFREI Informatique</span>
+                                <div class="nav-mini">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+
+                            <div class="bloc hero"></div>
+                            <div class="titre-faux"></div>
+                            <div class="texte-faux"></div>
+                            <div class="texte-faux"></div>
+
+                            <div class="cards">
+                                <div class="card"></div>
+                                <div class="card"></div>
+                                <div class="card"></div>
+                            </div>
+
+                            <div class="section-dark"></div>
+                            <div class="footer-faux"></div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <h3>Version mobile</h3>
+
+                        <div class="wireframe mobile">
+                            <div class="barre">
+                                <span>Logo</span>
+                                <div class="nav-mini">
+                                    <span></span>
+                                </div>
+                            </div>
+
+                            <div class="bloc hero"></div>
+                            <div class="titre-faux"></div>
+                            <div class="texte-faux"></div>
+
+                            <div class="cards">
+                                <div class="card"></div>
+                                <div class="card"></div>
+                                <div class="card"></div>
+                            </div>
+
+                            <div class="section-dark"></div>
+                            <div class="footer-faux"></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Choix graphiques</h2>
+                <p>
+                    Le design reprend une palette sobre et institutionnelle, avec des touches
+                    plus dynamiques pour les boutons, les survols et les éléments interactifs.
+                </p>
+
+                <div class="palette">
+                    <div class="couleur bleu">Bleu académique<br>#0A316C</div>
+                    <div class="couleur bleu-fonce">Bleu foncé<br>#061d40</div>
+                    <div class="couleur cyan">Cyan technologique<br>#81ECEC</div>
+                    <div class="couleur jaune">Jaune accent<br>#FDCB6E</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Structure des pages</h2>
+
+                <div class="choix">
+                    <article>
+                        <h3>Header</h3>
+                        <p>
+                            Le header contient le titre du site et la navigation principale
+                            vers toutes les pages.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Contenu principal</h3>
+                        <p>
+                            Les pages utilisent des sections, des cartes, un tableau,
+                            un formulaire et des blocs de contenu.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Footer</h3>
+                        <p>
+                            Le footer reprend la navigation principale et donne accès
+                            à la page “À propos”.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Responsive</h3>
+                        <p>
+                            La mise en page s’adapte aux écrans plus petits grâce aux media queries
+                            et au menu mobile.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <h2>5. Fonctionnalités prévues</h2>
+
+                <div class="checklist">
+                    <div class="check">Navigation entre les pages principales du site</div>
+                    <div class="check">Design responsive pour ordinateur, tablette et mobile</div>
+                    <div class="check">Tableau récapitulatif des compétences et débouchés</div>
+                    <div class="check">Formulaire de contact avec validation JavaScript</div>
+                    <div class="check">FAQ interactive sur la page contact</div>
+                    <div class="check">Filtres JavaScript sur la page vie étudiante</div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

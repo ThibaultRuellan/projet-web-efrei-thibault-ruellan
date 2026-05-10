@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Département Informatique Efrei</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo" aria-label="Accueil - Département Informatique Efrei">
+                <img src="images/logo-efrei.png" alt="Logo Efrei">
+            </a>
+
+            <button class="menu-bouton" id="menu-bouton" aria-label="Ouvrir le menu">☰</button>
+
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="campus.html">Vie étudiante</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero-contenu">
+                <p class="sur-titre">Contact et informations</p>
+                <h1>Contacter l’Efrei</h1>
+                <p>
+                    Cette page regroupe les informations utiles pour se renseigner sur le campus,
+                    les formations, la vie étudiante ou les domaines informatiques présentés sur le site.
+                </p>
+            </div>
+
+            <div class="page-hero-image">
+                <img src="images/campus-efrei-2.jpg" alt="Campus Efrei">
+            </div>
+        </section>
+
+        <section class="section contact-zone">
+            <div class="contact-infos">
+                <p class="sur-titre">Informations utiles</p>
+                <h2>Campus Paris / Villejuif</h2>
+
+                <div class="image-info-contact">
+                    <img src="images/campus-efrei.jfif" alt="Vue du campus Efrei">
+                </div>
+
+                <div class="info-bloc">
+                    <h3>Adresse</h3>
+                    <p>Campus Efrei Paris - Villejuif</p>
+                    <p>30-32 avenue de la République, 94800 Villejuif</p>
+                </div>
+
+                <div class="info-bloc">
+                    <h3>Renseignements</h3>
+                    <p>
+                        Le formulaire peut servir à poser une question sur les formations,
+                        les projets, la vie de campus ou les informations générales du site.
+                    </p>
+                </div>
+
+                <div class="info-bloc">
+                    <h3>Accès</h3>
+                    <p>
+                        Le campus est situé en région parisienne, à proximité de transports
+                        permettant aux étudiants de rejoindre l’école.
+                    </p>
+                </div>
+            </div>
+
+            <form class="formulaire-contact" id="formulaire-contact" action="#" method="post">
+                <h2>Envoyer un message</h2>
+
+                <div class="champ">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                    <small class="message-erreur" id="erreur-nom"></small>
+                </div>
+
+                <div class="champ">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@mail.com">
+                    <small class="message-erreur" id="erreur-email"></small>
+                </div>
+
+                <div class="champ">
+                    <label for="sujet">Sujet</label>
+                    <select id="sujet" name="sujet">
+                        <option value="">Choisir un sujet</option>
+                        <option value="formations">Formations</option>
+                        <option value="admissions">Admissions</option>
+                        <option value="campus">Vie étudiante</option>
+                        <option value="informatique">Département informatique</option>
+                    </select>
+                    <small class="message-erreur" id="erreur-sujet"></small>
+                </div>
+
+                <div class="champ">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Votre message"></textarea>
+                    <small class="message-erreur" id="erreur-message"></small>
+                </div>
+
+                <button type="submit" class="bouton principal">Envoyer</button>
+                <p class="confirmation" id="confirmation"></p>
+            </form>
+        </section>
+
+        <section class="section">
+            <div class="titre-section">
+                <p class="sur-titre">Questions fréquentes</p>
+                <h2>FAQ rapide</h2>
+                <p>
+                    Cette foire aux questions reprend les points importants du site :
+                    formations, domaines informatiques, vie étudiante et contact.
+                </p>
+            </div>
+
+            <div class="faq">
+                <article class="question">
+                    <button class="question-bouton">Quels domaines sont présentés sur le site ?</button>
+                    <div class="reponse">
+                        <p>
+                            Le site présente plusieurs domaines liés à l’informatique :
+                            développement web, cybersécurité, data, intelligence artificielle,
+                            systèmes, réseaux et cloud.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="question">
+                    <button class="question-bouton">À quoi sert la page Formations ?</button>
+                    <div class="reponse">
+                        <p>
+                            Elle présente les grands axes d’apprentissage, les compétences travaillées
+                            et des exemples de métiers possibles dans le numérique.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="question">
+                    <button class="question-bouton">Pourquoi parler de projets étudiants ?</button>
+                    <div class="reponse">
+                        <p>
+                            Les projets permettent de passer de la théorie à la pratique.
+                            Ils développent l’autonomie, l’organisation, la correction des erreurs
+                            et le travail en équipe.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="question">
+                    <button class="question-bouton">Le site est-il adapté aux petits écrans ?</button>
+                    <div class="reponse">
+                        <p>
+                            Oui, le site utilise des règles CSS responsive et un menu mobile
+                            en JavaScript pour s’adapter aux écrans plus petits.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h2>Efrei Informatique</h2>
+            <p>Projet de programmation web - TI402</p>
+        </div>
+
+        <nav class="footer-nav">
+            <a href="index.html">Accueil</a>
+            <a href="formations.html">Formations</a>
+            <a href="campus.html">Vie étudiante</a>
+            <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
+        </nav>
+    </footer>
+</body>
+</html>

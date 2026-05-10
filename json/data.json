@@ -1,0 +1,80 @@
+{
+    "site": {
+        "nom": "Site vitrine Efrei - Informatique",
+        "auteur": "Thibault Ruellan",
+        "formation": "2e année de prépa intégrée à l'Efrei Paris",
+        "matiere": "TI402 Programmation Web",
+        "realisation": "Projet réalisé individuellement",
+        "technologies": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+        ],
+        "description": "Site vitrine présentant l'Efrei, les formations informatiques, la vie étudiante, les projets numériques et les informations de contact."
+    },
+    "pages": [
+        {
+            "nom": "Accueil",
+            "fichier": "index.html",
+            "objectif": "Présenter l'Efrei, son orientation numérique, le campus et les grands domaines informatiques."
+        },
+        {
+            "nom": "Formations",
+            "fichier": "formations.html",
+            "objectif": "Présenter les domaines du numérique : développement web, cybersécurité, réseaux, data, IA, cloud et projets."
+        },
+        {
+            "nom": "Vie étudiante",
+            "fichier": "campus.html",
+            "objectif": "Mettre en avant le campus, les projets, les travaux pratiques, le travail en groupe et la vie associative."
+        },
+        {
+            "nom": "Contact",
+            "fichier": "contact.html",
+            "objectif": "Afficher les informations pratiques du campus, proposer un formulaire de contact et une FAQ."
+        },
+        {
+            "nom": "À propos",
+            "fichier": "apropos.html",
+            "objectif": "Présenter l'Efrei, l'objectif du site et une courte présentation du projet réalisé."
+        }
+    ],
+    "images": [
+        {
+            "nom": "logo-efrei.png",
+            "utilisation": "Logo principal placé dans le header du site."
+        },
+        {
+            "nom": "campus-efrei.jfif",
+            "utilisation": "Image principale du campus utilisée sur la page d'accueil et dans certaines sections."
+        },
+        {
+            "nom": "campus-efrei-2.jpg",
+            "utilisation": "Image complémentaire du campus utilisée sur les pages internes."
+        },
+        {
+            "nom": "code-ordinateur.jpg",
+            "utilisation": "Image liée au développement web, au code et au travail informatique."
+        },
+        {
+            "nom": "cybersecurite.jpg",
+            "utilisation": "Image utilisée pour illustrer la cybersécurité."
+        },
+        {
+            "nom": "etudiants-projet.jpg",
+            "utilisation": "Image utilisée pour représenter les projets étudiants et le travail en groupe."
+        },
+        {
+            "nom": "ia-data.jpg",
+            "utilisation": "Image utilisée pour illustrer la data, l'intelligence artificielle et les technologies numériques."
+        }
+    ],
+    "fonctionnalitesJavaScript": [
+        "Menu responsive",
+        "Lien actif dans la navigation",
+        "Effet visuel du header au scroll",
+        "Filtres de projets",
+        "FAQ interactive",
+        "Validation du formulaire"
+    ]
+}
